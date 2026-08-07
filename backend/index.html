@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navtara Astrology App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Navtara Calculator</h1>
+
+    <!-- Mode Switcher -->
+    <div class="tabs">
+      <button onclick="showTab('daily')">Daily Tara</button>
+      <button onclick="showTab('group')">Group Match (3 People)</button>
+    </div>
+
+    <!-- Tab 1: Single Person Daily -->
+    <div id="daily-tab" class="tab-content">
+      <h3>Apna Janma Nakshatra Chunein:</h3>
+      <select id="user-nakshatra"></select>
+
+      <h3>Aaj Ka Chandra Nakshatra:</h3>
+      <select id="current-nakshatra"></select>
+
+      <button onclick="calculateDailyTara()">Tara Check Karein</button>
+      <div id="daily-result" class="result-card"></div>
+    </div>
+
+    <!-- Tab 2: Group Matching -->
+    <div id="group-tab" class="tab-content" style="display:none;">
+      <h3>3 Logon Ka Nakshatra Select Karein:</h3>
+      <label>Person 1:</label> <select id="p1-nakshatra"></select><br>
+      <label>Person 2:</label> <select id="p2-nakshatra"></select><br>
+      <label>Person 3:</label> <select id="p3-nakshatra"></select><br><br>
+
+      <label>Select Month / Target Nakshatra:</label>
+      <select id="target-nakshatra"></select>
+
+      <button onclick="calculateGroupTara()">Combined Match Check Karein</button>
+      <div id="group-result" class="result-card"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
